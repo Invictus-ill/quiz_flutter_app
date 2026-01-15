@@ -35,7 +35,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                 style: TextStyle(color: Colors.white),
               ),
             ),
-            ...question.answers.map((answer) {
+            ...question.getShuffledAnswers().map((answer) {
               return AnswerButton(text: answer, callback: () {});
             }),
           ],
