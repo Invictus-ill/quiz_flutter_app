@@ -28,6 +28,19 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(context) {
-    return MaterialApp(home: Scaffold(body: activeScreen));
+    return MaterialApp(
+      home: Scaffold(
+        body: Container(
+          decoration: BoxDecoration(
+            gradient: const LinearGradient(
+              begin: AlignmentGeometry.topLeft,
+              end: AlignmentGeometry.bottomRight,
+              colors: [Colors.deepPurple, Colors.purple],
+            ),
+          ),
+          child: activeScreen,
+        ),
+      ),
+    );
   }
 }
